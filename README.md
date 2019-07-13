@@ -1,5 +1,5 @@
-# SilverzEssentials
-Best essentials plugin
+# SilverzBroadcast
+Best broadcast plugin
 
 # Features
 - [x] /bcast - Broascast a message to everyone online!
