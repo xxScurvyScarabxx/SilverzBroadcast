@@ -1,6 +1,6 @@
-name: SilverzEssentials
+name: SilverzBroadcast
 api: [3.0.0]
-main: SilverzPlayz\SilverzEssentials\Main
+main: SilverzPlayz\SilverzBroadcast\Main
 version: 1.0
 commands:
   broadcast:
