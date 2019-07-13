@@ -2,7 +2,7 @@
 Best essentials plugin
 
 # Features
-/bcast - Broascast a message to everyone online!
+- [x] /bcast - Broascast a message to everyone online!
 
 # Latest Version
 
