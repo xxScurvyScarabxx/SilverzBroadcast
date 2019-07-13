@@ -1,8 +1,11 @@
 name: SilverzEssentials
+api: [3.0.0]
 main: SilverzPlayz\SilverzEssentials\Main
-version: 1.0.0
-api: 3.6.0
-author: SilverzPlayz
+version: 1.0
 commands:
-  bcast:
-    description: Broadcast a message
+  broadcast:
+    description: "Broadcast a Message"
+    aliases: ["bcast", "bc"]
+permissions:
+  broadcast.cmd.bcast:
+    default: op
