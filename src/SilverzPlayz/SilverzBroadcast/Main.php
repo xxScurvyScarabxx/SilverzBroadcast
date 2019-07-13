@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace SilverzPlayz\SilverzEssentials;
+namespace SilverzPlayz\SilverzBroadcast;
 use pocketmine\Server;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\Command;
