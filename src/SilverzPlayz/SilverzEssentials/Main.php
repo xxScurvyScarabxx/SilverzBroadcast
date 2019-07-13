@@ -45,4 +45,15 @@ class Main extends PluginBase{
 		}
 		return true;
 	}
+
+public function onCommand(CommandSender $sender, Command $command, string $label, array $args) : bool{
+		switch($command->getName()){
+			case "silverzessentials":
+				$sender->sendMessage("§dCoded by §5SilverzPlayz\n\n§bDiscord - §3SilverzPlayz");
+				return true;
+			default:
+				return false;
+		}
+	}
+
 }
