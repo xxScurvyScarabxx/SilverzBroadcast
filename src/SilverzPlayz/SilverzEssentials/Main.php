@@ -1,51 +1,31 @@
 <?php
+
 declare(strict_types=1);
-namespace SilverzPlayz\SilverzEssentials;
-use pocketmine\Server;
+
+namespace SilverzEssentials;
+
 use pocketmine\plugin\PluginBase;
-use pocketmine\command\Command;
-use pocketmine\command\CommandSender;
-use pocketmine\Player;
-use pocketmine\utils\Config;
+use pocketmine\utils\TextFormat;
+use SilverzEssentials\commands\FlyCommand;
+
+
 class Main extends PluginBase{
-	
-	public function onEnable(){
-		$this->getLogger()->info("Loading Config.yml");
 
+	public const PREFIX = TextFormat::DARK_PURPLE . TextFormat::BOLD . "SilverzEssentials " . TextFormat::RESET;
 
+	/** @var Main $instance */
+	protected static $instance;
 
-		$this->saveResource("config.yml");
-	}
-	
-	public function onDisable(){
-		$this->getLogger()->info("Saving Config.yml");
-
-
-
-	}
-	
-	public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args) : bool{
-		switch($cmd->getName()){
-			case "broadcast":
-			 $cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML);
-			 $noperm = $cfg->get("noperm");
-			 $succes = $cfg->get("succes");
-			 $format = $cfg->get("format");
-			 $name = $sender->getName();
-			 $msg = implode(" ",$args);
-			 if($sender->hasPermission("broadcast.cmd.bcast")){
-			 	$format = str_replace("{sender}", $name, $format);
-			 	$format = str_replace("{msg}", $msg, $format);
-			 	
-			 	$sender->sendMessage($succes);
-			 	$this->getServer()->broadcastMessage($format);
-			 }else{
-			 	$sender->sendMessage($noperm);
-			 }
+	public function onEnable() : void{
+		self::$instance = $this;
+		$this->setMotd(str_replace("&", "§", strval($this->getConfig()->get("motd"))));
+		@mkdir($this->getDataFolder());
+		$this->saveDefaultConfig();
+		$this->getServer()->getCommandMap()->registerAll("ShellyEssentials", [
+			new FlyCommand($this)
+		]);
 		}
-		return true;
-	}
 
-
-
+	
+	
 }
