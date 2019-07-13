@@ -3,5 +3,5 @@ branches:
 - master
 projects:
   SilverzEssentials:
-    path: ""
+    path: "icons8-new-message-64.png"
 ...
