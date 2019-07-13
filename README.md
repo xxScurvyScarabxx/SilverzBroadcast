@@ -1,8 +1,6 @@
 [![](https://poggit.pmmp.io/shield.state/SilverzBroadcast)](https://poggit.pmmp.io/p/SilverzBroadcast)
 <a href="https://poggit.pmmp.io/p/SilverzBroadcast"><img src="https://poggit.pmmp.io/shield.state/SilverzBroadcast"></a>
 
-[![](https://poggit.pmmp.io/shield.api/SilverzBroadcast)](https://poggit.pmmp.io/p/SilverzBroadcast)
-<a href="https://poggit.pmmp.io/p/SilverzBroadcast"><img src="https://poggit.pmmp.io/shield.api/SilverzBroadcast"></a>
 
 # SilverzBroadcast
 Best broadcast plugin
