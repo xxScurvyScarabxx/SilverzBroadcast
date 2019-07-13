@@ -9,9 +9,4 @@ commands:
 permissions:
   broadcast.cmd.bcast:
     default: op
-  silverzessentials:
-    description: "About SilverzEssentials"
-    aliases: ["silveress", "se"]
-permissions:
-  se.cmd:
-    default: true
+  
