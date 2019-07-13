@@ -1,0 +1,6 @@
+---
+succes: "§aYou've successfully made a Broadcast."
+noperm: "§cYou don't have Permissions for that."
+#aviable {sender} {msg}
+format: "§7[§l§aSilverzEssentials§r§7] {sender} -> §8{msg}"
+...
